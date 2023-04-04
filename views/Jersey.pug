@@ -2,4 +2,15 @@ extends layout
 
 block content
   h1= title
-  
+
+div(class="container-fluid")
+  div(class="row")
+    -
+    let results =
+      {name:"Jersey_type", value: 10}, 
+      {name:"size", value: 20}, 
+      {name:"Jersey_number", value: 30}
+    each item in results
+      div(class="col-sm-2") #{result.name}:
+      div(class="col-sm-2") #{result.name}:
+      div(class="col-sm-2") #{result.name}:
