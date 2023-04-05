@@ -3,14 +3,8 @@ extends layout
 block content
   h1= title
 
-div(class="container-fluid")
-  div(class="row")
-    - let results = [
-        {name: "Jersey_type"}, 
-        {name: "size"}, 
-        {name: "Jersey_number"}
-        ]
-    - each item in results
-      div(class="col-sm-2") #{item.name}:
-        div(class="col-sm-2") #{item.name}:
-          div(class="col-sm-2") #{item.name}:
+  div(class="container-fluid")
+    div(class="row")
+      - let results = [{name: "Jersey_type1", size: "size1", type: "Jersey_number1"},{name: "Jersey_type2", size: "size2", type: "Jersey_number2"},{name: "Jersey_type3", size: "size3", type: "Jersey_number3"}]
+        each item in results
+          div(class="col-sm-2") #{item.name} #{item.type} #{item.size}
