@@ -2,3 +2,20 @@ extends layout
 
 block content
   h1= title
+  p rows is #{query.rows} and columns is #{query.cols}
+  - rows = Number(query.rows)
+  - cols = Number(query.cols)
+  if Number.isInteger(rows) || Number.isInteger(cols)
+    p There is a problem
+  else if rows > 10 || rows < 1:
+    p Number is out of range
+  else if cols > 10 || cols < 1:
+    p Number is out of range
+  else
+    table#outer
+      - for(let i=0; i<10; i++){
+          tr#middle
+            - for(let j=0; j<10; j++){
+                td= 
+            -}
+      -}
